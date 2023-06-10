@@ -1,0 +1,45 @@
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: registry.gitlab.com/pages/hugo/hugo_extended:latest
+  variables:
+    SKIP_BUILD: "0"
+  before_script:
+    - apk add --update npm
+    - npm install
+  script:
+    - hugo
+  artifacts:
+    paths:
+    - public
+  rules:
+  # not working yet: https://gitlab.com/gitlab-org/gitlab/-/issues/235812
+  - if: $SKIP_BUILD == "1"
+    when: never
+  - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+deploy:
+  stage: deploy
+  image: registry.gitlab.com/pages/hugo/hugo_extended:latest
+  variables:
+    GIT_STRATEGY: none
+  script: 
+    - apt-get update -qy
+    - apt-get install -y ssh rsync
+    - chmod 400 "$SSH_PRIV_KEY"
+    - mkdir -p $HOME/.ssh
+    - chmod 700 $HOME/.ssh
+    - ssh-keygen -R $SSH_HOST || true
+    - ssh-keyscan -p$SSH_PORT $SSH_HOST > $HOME/.ssh/known_hosts
+    - /usr/bin/rsync -av -e "/usr/bin/ssh -p$SSH_PORT -i $SSH_PRIV_KEY" public/ $SSH_USER@$SSH_HOST:$SSH_PATH
+  after_script:
+    - rm -Rf "$SSH_PRIV_KEY"
+  environment: production
+  rules: 
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

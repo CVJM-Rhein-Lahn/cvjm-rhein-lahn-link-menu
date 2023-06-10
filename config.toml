@@ -1,0 +1,67 @@
+baseURL = 'https://l.cvjm-rhein-lahn.de'
+languageCode = 'de'
+title = 'Links des CVJM Kreisverband Rhein-Lahn e.V.'
+defaultContentLanguage = "de"
+copyright = " "
+
+enableEmoji = true
+disableKinds = ["taxonomy", "term"]
+
+[author]
+  name = "@cvjmrheinlahn"
+  headline = "Christlich. Visionär. Jung. Mutig. CVJM."
+  image = "img/CVJM_Logo.png"
+
+  links = [
+    { link = { href = "https://cvjm-rhein-lahn.de", text = "Website", icon = " " }},
+    { link = { href = "http://lindenmuehle.cvjm-rhein-lahn.de", text = "Freizeitheim Lindenmühle", icon = " " }},
+    { link = { href = "http://stiftung.cvjm-rhein-lahn.de", text = "Jugendstiftung Rhein-Lahn", icon = " " }},
+    { instagram = { href = "https://instagram.com/cvjmrheinlahn", text = "Instagram" }},
+    { facebook = { href = "https://facebook.com/cvjmrheinlahn", text = "Facebook" }},
+    { youtube = { href = "https://www.youtube.com/channel/UCvwG1dWx2-ME0UgOmbsvdrw", text = "YouTube" }},
+    { github = { href = "https://github.com/CVJM-Rhein-Lahn", text = "GitHub" }},
+    { email = { href = "mailto:info@cvjm-rhein-lahn.de", text = "E-Mail" }},
+    { link = { href = "https://cvjm-rhein-lahn.de/Willkommen/Datenschutz.html", text = "Datenschutz", icon = " " }},
+    { link = { href = "https://cvjm-rhein-lahn.de/Willkommen/Impressum.html", text = "Impressum", icon = " " }},
+    # { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
+    # { apple = "https://www.apple.com" },
+    # { codepen = "https://codepen.io/username" },
+    # { dev = "https://dev.to/username" },
+    # { discord = "https://discord.gg/invitecode" },
+    # { dribbble = "https://dribbble.com/username" },
+    # { facebook = "https://facebook.com/username" },
+    # { flickr = "https://www.flickr.com/photos/username/" },
+    # { foursquare = "https://foursquare.com/username" },
+    # { github = "https://github.com/username" },
+    # { gitlab = "https://gitlab.com/username" },
+    # { google = "https://www.google.com/" },
+    # { instagram = "https://instagram.com/username" },
+    # { keybase = "https://keybase.io/username" },
+    # { kickstarter = "https://www.kickstarter.com/profile/username" },
+    # { lastfm = "https://lastfm.com/user/username" },
+    # { linkedin = "https://linkedin.com/in/username" },
+    # { mastodon = "https://mastodon.instance/@username" },
+    # { medium = "https://medium.com/username" },
+    # { microsoft = "https://www.microsoft.com/" },
+    # { patreon = "https://www.patreon.com/username" },
+    # { pinterest = "https://pinterest.com/username" },
+    # { reddit = "https://reddit.com/user/username" },
+    # { slack = "https://workspace.url/team/userid" },
+    # { snapchat = "https://snapchat.com/add/username" },
+    # { soundcloud = "https://soundcloud.com/username" },
+    # { stack-exchange = "https://stackexchange.com/users/userid/username" },
+    # { stack-overflow = "https://stackoverflow.com/users/userid/username" },
+    # { steam = "https://steamcommunity.com/profiles/userid" },
+    # { telegram = "https://t.me/username" },
+    # { tiktok = "https://tiktok.com/@username" },
+    # { tumblr = "https://username.tumblr.com" },
+    # { twitch = "https://twitch.tv/username" },
+    # { twitter = "https://twitter.com/username" },
+    # { whatsapp = "https://wa.me/phone-number" },
+    # { youtube = "https://youtube.com/username" },
+  ]
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.86.1"

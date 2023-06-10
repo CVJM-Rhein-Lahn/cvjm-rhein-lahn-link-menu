@@ -1,0 +1,7 @@
+resources/_gen
+node_modules
+dist
+public
+.vscode
+*.env
+.hugo_build.lock
