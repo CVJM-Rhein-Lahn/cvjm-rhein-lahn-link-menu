@@ -29,7 +29,7 @@ deploy:
   variables:
     GIT_STRATEGY: none
   before_script:
-    - apk update && apk add openssh-client rsync
+    - apk update && apk add openssh-client openssh-keygen rsync
     - eval $(ssh-agent -s)
     - echo "$SSH_PRIV_KEY" | ssh-add -
   script: 
