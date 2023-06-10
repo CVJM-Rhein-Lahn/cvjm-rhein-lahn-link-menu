@@ -25,11 +25,11 @@ build:
 
 deploy:
   stage: deploy
-  image: alpine:latest
+  image: debian:latest
   variables:
     GIT_STRATEGY: none
   before_script:
-    - apk update && apk add openssh-client openssh-keygen rsync
+    - apt-get update && apt-get install openssh-client rsync
     - eval $(ssh-agent -s)
     - mkdir -p $HOME/.ssh
     - chmod 700 $HOME/.ssh
