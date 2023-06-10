@@ -6,7 +6,7 @@ header img.mb-2 {
     background-color: #ffffff;
 }
 
-a.link-link {
+a.link {
     background-color: #fcf6f4;
     color: #000;
     border: 1px solid #000;
@@ -17,7 +17,7 @@ a.link-link {
         background-color: #000;
     }
     
-    a.link-link {
+    a.link {
         background-color: #000;
         color: #ffffff;
         border: 1px solid #fcf6f4;
