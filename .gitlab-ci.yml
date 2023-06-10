@@ -26,9 +26,9 @@ deploy:
   image: registry.gitlab.com/pages/hugo/hugo_extended:latest
   variables:
     GIT_STRATEGY: none
+  before_script:
+    - apk add --update rsync ssh
   script: 
-    - apt-get update -qy
-    - apt-get install -y ssh rsync
     - chmod 400 "$SSH_PRIV_KEY"
     - mkdir -p $HOME/.ssh
     - chmod 700 $HOME/.ssh
