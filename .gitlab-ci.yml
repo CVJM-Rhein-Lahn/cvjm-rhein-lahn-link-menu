@@ -29,7 +29,7 @@ deploy:
   variables:
     GIT_STRATEGY: none
   before_script:
-    - apt-get update && apt-get install openssh-client rsync
+    - apt-get update && apt-get install -y openssh-client rsync
     - eval $(ssh-agent -s)
     - mkdir -p $HOME/.ssh
     - chmod 700 $HOME/.ssh
