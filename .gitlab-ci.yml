@@ -10,6 +10,8 @@ build:
   image: registry.gitlab.com/pages/hugo/hugo_extended:latest
   variables:
     SKIP_BUILD: "0"
+  before_script:
+    - apk add --update go
   script:
     - hugo
   artifacts:
