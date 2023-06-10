@@ -29,12 +29,12 @@ deploy:
   variables:
     GIT_STRATEGY: none
   before_script:
-    - apk add --update rsync
+    - apk add --update rsync openssh-keygen openssh-client
   script: 
     - chmod 400 "$SSH_PRIV_KEY"
     - mkdir -p $HOME/.ssh
     - chmod 700 $HOME/.ssh
-    - ssh-keygen -R $SSH_HOST || true
+    - openssh-keygen -R $SSH_HOST || true
     - ssh-keyscan -p$SSH_PORT $SSH_HOST > $HOME/.ssh/known_hosts
     - /usr/bin/rsync -av -e "/usr/bin/ssh -p$SSH_PORT -i $SSH_PRIV_KEY" public/ $SSH_USER@$SSH_HOST:$SSH_PATH
   after_script:
