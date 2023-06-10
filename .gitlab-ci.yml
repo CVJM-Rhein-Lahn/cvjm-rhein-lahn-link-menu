@@ -29,7 +29,7 @@ deploy:
   variables:
     GIT_STRATEGY: none
   before_script:
-    - apk add --update rsync ssh
+    - apk add --update rsync
   script: 
     - chmod 400 "$SSH_PRIV_KEY"
     - mkdir -p $HOME/.ssh
