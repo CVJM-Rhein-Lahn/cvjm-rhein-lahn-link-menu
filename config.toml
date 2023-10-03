@@ -15,6 +15,7 @@ disableKinds = ["taxonomy", "term"]
   links = [
     { link = { href = "https://cvjm-rhein-lahn.de", text = "Website", icon = " " }},
     { link = { href = "http://lindenmuehle.cvjm-rhein-lahn.de", text = "Freizeitheim Lindenmühle", icon = " " }},
+    { link = { href = "https://bau.lindenmuehle.cvjm-rhein-lahn.de", text = "Bau Freizeitheim Lindenmühle", icon = " " }},
     { link = { href = "http://stiftung.cvjm-rhein-lahn.de", text = "Jugendstiftung Rhein-Lahn", icon = " " }},
     { instagram = { href = "https://instagram.com/cvjmrheinlahn", text = "Instagram" }},
     { facebook = { href = "https://facebook.com/cvjmrheinlahn", text = "Facebook" }},
